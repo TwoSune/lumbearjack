@@ -8,12 +8,11 @@ The goal of this project is to build an all through-hole component ortholinear P
 
 Inspired by the [Plaid keyboard](https://github.com/hsgw/plaid).
 
-![PCB render](images/pcb-render.jpg)
+![PCB render](images/pcb-render.png)
 
 * Designed to be easy to build with minimal soldering experience.
-* All through-hole components, no SMD soldering required.
 * Get that visible component aesthetic in a standard 60% tray-mount case.
-* Supports both USB Mini and USB-C.
+* 12 pin USB-C or JST connector.
 * Plateless or with FR4 switch plates.
 
 ![PCB design](images/pcb-design.png)
@@ -30,11 +29,9 @@ The [zip file in the gerber directory](https://github.com/peej/lumberjack-keyboa
 
 When uploading the gerber zip files, use the default PCB settings.
 
-Note that when uploading to JLCPCB, the upload tool may not detect the dimensions of the PCB from the gerber files and may not generate a preview image. This appears to be an issue with JLCPCB and you can manually enter the PCB size as 94.6x285mm.
-
 ![PCB](images/pcb.jpg)
 
-If you want to use a plate, there are gerbers for an FR4 plate. You will need two plates, one for each half of the keyboard.
+If you want to use a plate, there are [gerbers for FR4 plates](https://github.com/peej/lumberjack-keyboard/tree/smd-usbc/plates/gerbers). For the split plate, you will need two plates, one for each half of the keyboard.
 
 # Construction
 
@@ -141,3 +138,12 @@ SuPaSeM#3659 (discord) will hold things in place, keep them neat and tidy, and c
 ## Rev 1.7
 
 * Change board outline to include cutouts for Cannon Keys Bakeneko and Singa Unikorn
+
+## Rev 1.8
+
+* Re-routed power and USB lines
+* Change USB connector from THT to TYPE-C-31-M-12 SMD component
+* Added fillets and curved traces
+* Remove copper fill from top layer
+* Remove Alps and Choc switch support
+* Add Molex Pico-EZmate connector footprint for universal daugherboard
