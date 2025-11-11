@@ -6,19 +6,21 @@ Lumbearjack is a revision of peej's lumberjack with the following features:
 * Rotary encoder support
 * SMD diode support
 * BSS138 logic level shifter
+  
+![PCB Render] ()
 
 Lumbearjack is currently designed with the following development boards:
 * Helios
 * Sea Picro
 * Frood
-* Pluto
 * KB2040 (no encoder support)
   
 With support for the following, but you may struggle with external USB data lines
 * Liatris
 * Elite-Pi
 
-![PCB Render] ()
+At its core, Lumbearjack remains easy to build with minimal soldering experience, but being familiar with soldering is highly recommended for per-key RGB (SK68XX Mini-E) and backlight (WS2812B 2020).
+
 
 
 ![Tofu w/ KAT Space Cadet](images/tofu-kat-spacecadet.jpg)
