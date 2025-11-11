@@ -10,7 +10,7 @@ Lumbearjack is a revision of peej's lumberjack with the following features:
 ![PCB Render Front](images/PCB-Render-F.png)
 ![PCB Render Back](images/PCB-Render-B.png)
 
-Lumbearjack is currently designed with the following development boards:
+Lumbearjack is currently designed for the following development boards:
 * Helios
 * Sea Picro
 * Frood
