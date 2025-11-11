@@ -1,12 +1,27 @@
-# Lumberjack - Through-hole ortholinear 60% keyboard PCB
+# Lumbearjack - Ortholinear 60% PCB based on Lumberjack by peej
 
-Lumberjack is a split 5x12 ortholinear keyboard PCB using through-hole components only.
+Lumbearjack is a revision of peej's lumberjack with the following features:
+* Pro Micro style controller support
+* Per-key RGB and Backlight support
+* Rotary encoder support
+* SMD diode support
+* BSS138 logic level shifter
+
+Lumbearjack is currently designed with the following development boards:
+* Helios
+* Sea Picro
+* Frood
+* Pluto
+* KB2040 (no encoder support)
+  
+With support for the following, but you may struggle with external USB data lines
+* Liatris
+* Elite-Pi
+
+![PCB Render] ()
+
 
 ![Tofu w/ KAT Space Cadet](images/tofu-kat-spacecadet.jpg)
-
-The goal of this project is to build an all through-hole component ortholinear PCB that fits in a standard 60% tray mount case.
-
-Inspired by the [Plaid keyboard](https://github.com/hsgw/plaid).
 
 ![PCB render](images/pcb-render.png)
 
@@ -90,60 +105,9 @@ Affix the 4 standoffs to the PCB with screws from underneath the PCB. Use the re
 
 ![Completed build w/o caps](images/complete.jpg)
 
-# Electronic component cradles
-
-Want to give your components the comfort they need, right?
-
-These 3d printable cradles for your electornic components provided by 
-SuPaSeM#3659 (discord) will hold things in place, keep them neat and tidy, and cradle your components like a baby.
-
-![Cradles preview](images/cradles.jpg)
 
 # Revisions
 
-## Rev 1.1
+## Rev 1.0
 
-* Fix cosmetic errors in silkscreen
-* Increase resistor footprint size
-* Fix R1 resistor connection to D-
-
-## Rev 1.2
-
-* Add JST socket footprint for USB daughterboard
-* Rotate central mount hole 90 degrees
-
-## Rev 1.3
-
-* Add hybrid USB port footprint for mini and type C
-* Fix numbering of zener diode footprints
-* Flip MX7 to be south facing
-
-## Rev 1.4
-
-* Use USB footprint with better positioning
-* Move 5.1k resistors to better location
-* Change MX8 to allow both north and south facing switch
-## Rev 1.5
-
-* Change board outline to include cutouts for Bakeneko 60
-* Re-route traces away from edges of the board
-* Change MX footprints to MX/Alps/Choc combined footprint
-* Add through-hole JST connector footprint
-* Add silkscreen art to underside
-
-## Rev 1.6
-
-* Add mounting holes for standoffs so PCB can be used without a case
-
-## Rev 1.7
-
-* Change board outline to include cutouts for Cannon Keys Bakeneko and Singa Unikorn
-
-## Rev 1.8
-
-* Re-routed power and USB lines
-* Change USB connector from THT to TYPE-C-31-M-12 SMD component
-* Added fillets and curved traces
-* Remove copper fill from top layer
-* Remove Alps and Choc switch support
-* Add Molex Pico-EZmate connector footprint for universal daugherboard
+* Initial design introduced
