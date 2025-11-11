@@ -3,7 +3,7 @@
 | Ref       | Qty   | Value or Part# | Description                                           |
 |-----------|-------|----------------|-------------------------------------------------------|
 | ![U1]()        | 0-1   | Helios/n!n     | Helios or similar controller with external USB        |
-| ![D1-61]()     | 61    | 1N4148         | generic switching diode                               |
+| ![D1-61]()     | 60-61 | 1N4148         | generic switching diode                               |
 | ![MX1-61]()    | 60-61 | MX Switch      | Cherry MX-compatible keyboard switch                  |
 | ![SW2]()       | 0-1   | EC11           | EC11 rotary encoder (optional, instead of switch #61) |
 | ![LED1-60]()   | 60    | SK68XX MINI-E  | Per-key RGB (optional)                                |
