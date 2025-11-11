@@ -42,8 +42,6 @@ The [zip file in the gerber directory](https://github.com/peej/lumberjack-keyboa
 
 When uploading the gerber zip files, use the default PCB settings.
 
-![PCB](images/pcb.jpg)
-
 If you want to use a plate, there are [gerbers for FR4 plates](https://github.com/peej/lumberjack-keyboard/tree/smd-usbc/plates/gerbers). For the split plate, you will need two plates, one for each half of the keyboard.
 
 # Construction
