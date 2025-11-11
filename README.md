@@ -22,12 +22,8 @@ With support for the following, but you may struggle with external USB data line
 
 At its core, Lumbearjack remains easy to build with minimal soldering experience, but being familiar with soldering is highly recommended for per-key RGB (SK68XX Mini-E) and backlight (WS2812B 2020).
 
-![Tofu w/ KAT Space Cadet](images/tofu-kat-spacecadet.jpg)
-
-![PCB render](images/pcb-render.png)
-
-
-
+![Build Example](images/build.png)
+![PCB Picture](images/PCB-Picture)
 ![PCB design](images/pcb-design.png)
 
 # Ordering parts
