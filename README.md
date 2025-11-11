@@ -22,16 +22,11 @@ With support for the following, but you may struggle with external USB data line
 
 At its core, Lumbearjack remains easy to build with minimal soldering experience, but being familiar with soldering is highly recommended for per-key RGB (SK68XX Mini-E) and backlight (WS2812B 2020).
 
-
-
 ![Tofu w/ KAT Space Cadet](images/tofu-kat-spacecadet.jpg)
 
 ![PCB render](images/pcb-render.png)
 
-* Designed to be easy to build with minimal soldering experience.
-* Get that visible component aesthetic in a standard 60% tray-mount case.
-* 12 pin USB-C or JST connector.
-* Plateless or with FR4 switch plates.
+
 
 ![PCB design](images/pcb-design.png)
 
@@ -53,37 +48,31 @@ If you want to use a plate, there are [gerbers for FR4 plates](https://github.co
 
 # Construction
 
-Solder all the components onto the top side of the PCB except the USB connector which should be on the back of the board. Leave the larger components until last so that the board will lie flat upsidedown while you solder the resistors and capacitors.
-
-Take care to put the correct value resistors and capacitors in the correct places, the values are written on the silkmask along with the component reference. If you are unsure about the value of a resistor, check it with a multimeter.
-
-Ensure that polarised components (diodes, LEDs, electrolytic capacitor (C3), IC socket) are in the correct orientation. The square pad is for the negative side of the component; for a diode this means the side with the black stripe; for LEDs and C3 the short leg is the cathode and goes in the square pad.
+First, solder all the diodes on the top of the board. If you do not plan on using an encoder or a switch in the middle, you may omit the diode in the center of the board.
+After you solder the diodes, solder the USB port on your board. From there, you may decide whether you would like to solder the LEDs or the controller to your board. It is recommended to solder the controller first so you may test your RGB as you solder them a few at a time.
 
 See [the build guide](guide.md) for more information.
 
 ## Need help?
 
-Have questions or need help, reach out via [our Discord server](https://discord.gg/cQ9EXqQmpE) where you will find many helpful Lumberjack owners.
+Feel free to create an issue request or contact me via discord at xsune for help!
 
 # Firmware
 
-Firmware is available in the QMK repository under the name `peej/lumberjack`.
+Firmware is available in my [firmware repository](hyperlink)
 
 Follow the [QMK firmware instructions](https://docs.qmk.fm/#/flashing) to build and flash the firmware.
 
-To put the board into bootloader mode so it is ready to recieve firmware, press and hold the BOOT button (SW2) while pressing and releasing the RESET button (SW1). The board will now be detected as an USBasp device and can have the firmware flashed via the USB port.
+(as of Rev 1.0, there is no onboard reset button. A reset button will be added to Rev 1.1.) 
 
-Pressing the RESET button (SW1) on its own will restart the microprocessor. Once flashed with firmware it is neccessary to reset the keyboard so as to return control to the new firmware.
+## VIAL
 
-Note that due to the BOOT button (SW2) sharing a pin with column 3, when pressed the keys in that column will also activate. This is expected behavour but can be a little annoying or confusing if you are not expecting it.
-
-## VIA
-
-There is a VIA compatible firmware available in QMK. With this firmware flashed, the board will be automatically recognised by VIA when you plug it in.
+Lumbearjack is compatible with Vial. You may follow the instructions for setting up a build environment [here](https://get.vial.today)
+ZMK firmware will be added in the future
 
 ## Bootloader
 
-If you have a "raw" chip without a bootloader, you will need to compile and flash the bootloader onto the chip via another device. [See the build guide for more information](guide.md#bootloader).
+ [See the build guide for more information](guide.md#bootloader).
 
 ## Matrix information
 
@@ -91,13 +80,13 @@ If you are building your own firmware, the following matrix information will be 
 
 | Configuration   | Value                                  |
 |-----------------|----------------------------------------|
-| MATRIX_ROWS     | 6                                      |
-| MATRIX_COLS     | 10                                     |
-| MATRIX_ROW_PINS | C0, B5, B4, B3, B2, B1                 |
-| MATRIX_COL_PINS | B0, D7, D6, D5, D4, D1, D0, C1, C2, C3 |
+| MATRIX_ROWS     | 12                                      |
+| MATRIX_COLS     | 7                                     |
+| MATRIX_ROW_PINS | X (GPX), X (GPX), X (GPX), X (GPX), X (GPX), |
+| MATRIX_COL_PINS | X (GPX), X (GPX), X (GPX), X (GPX), X (GPX), |
 | DIODE_DIRECTION | COL2ROW                                |
 
-Due to the limited pin number of the ATMEGA328P, the PCB uses a 6 by 10 matrix (16 pins) instead of a 5 by 12 matrix (17 pins), this makes organising the matrix in your firmware slightly more complicated. The image below shows pins for each key.
+Lumbearjack uses an interleaved matrix to save a pin for RGB and a pin for the middle key so KB2040 users may still have access to most of the features. You must use an Elite-C style dev board for encoder support.
 
 ![Layout pins](images/layout.png)
 # Component cover
@@ -114,3 +103,10 @@ Affix the 4 standoffs to the PCB with screws from underneath the PCB. Use the re
 ## Rev 1.0
 
 * Initial design introduced
+
+## Rev 1.1 plans:
+* Make external USB data lines easier to solder for Elite-Pi and Liatris users.
+* RGB strip support
+* Adjust some LED placements and switch orientations
+* Add Reset Button
+* Possibly revise the logic level shifter
