@@ -7,8 +7,8 @@ Lumbearjack is a revision of peej's lumberjack with the following features:
 * SMD diode support
 * BSS138 logic level shifter
   
-![PCB Render Front] (images/PCB-Render-F.png)
-![PCB Render Back] (images/PCB-RenderB.png)
+![PCB Render Front](images/PCB-Render-F.png)
+![PCB Render Back](images/PCB-Render-B.png)
 
 Lumbearjack is currently designed with the following development boards:
 * Helios
